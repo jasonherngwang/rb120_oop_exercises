@@ -56,7 +56,8 @@ end
 
 class Shelter
   def initialize
-    @adoptions = Hash.new([])
+    # @adoptions = Hash.new([])
+    @owners = {}
     @unadopted_pets = []
   end
 
@@ -66,7 +67,8 @@ class Shelter
   
   def adopt(owner, pet)
     owner.add_pet(pet)
-    adoptions[owner] += [pet]
+    # adoptions[owner] += [pet]
+    @owners[owner.name] ||= owner
   end
 
   def print_unadopted_pets
@@ -78,8 +80,8 @@ class Shelter
   end
 
   def print_adoptions
-    adoptions.each do |owner, pets|
-      puts "#{owner.name} has adopted the following pets:"
+    @owners.each do |owner_name, owner|
+      puts "#{owner_name} has adopted the following pets:"
       owner.print_pets
       # pets.each do |pet|
       #   puts pet

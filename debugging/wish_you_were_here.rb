@@ -3,9 +3,9 @@ On lines 37 and 38 of our code, we can see that grace and ada are located at
 the same coordinates. So why does line 39 output false? Fix the code to 
 produce the expected output.
 
-The == method is not implemented for class Person. By default it checks it the 
-two objects are the same object (not same value). Override this in Geolocation 
-to compare the value of location, not the identity.
+The == method is not implemented for class Geolocaiton. By default it checks if 
+the two objects are the same object (not same value). Override this in 
+Geolocation to compare the value of location, not the identity.
 =end
 
 class Person

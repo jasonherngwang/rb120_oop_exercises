@@ -8,6 +8,8 @@ operation and initializes local variable `tasks` to `nil`. Then it invokes the
 select method on `nil`, raising an exception. To specify that the select 
 method should be invoked on the instance variable @tasks, use self.tasks to 
 invoke the getter method for tasks. Better yet, rename the local variable.
+
+This is an example of the local variable `tasks` shadowing the getter.
 =end
 
 require 'pry'

@@ -1,6 +1,7 @@
 class GuessingGame
   GUESS_LIMIT = 7
   NUMBER_RANGE = 1..100
+  
   def initialize
     @guesses_remaining = GUESS_LIMIT
     @secret_number = rand(NUMBER_RANGE)

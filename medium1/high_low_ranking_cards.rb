@@ -4,6 +4,7 @@ class Card
   attr_reader :rank, :suit
   
   RANK_ORDER = [*2..10, 'Jack', 'Queen', 'King', 'Ace']
+  SUIT_ORDER = ['Spades', 'Hearts', 'Clubs', 'Diamonds']
 
   def initialize(rank, suit)
     @rank = rank
@@ -11,7 +12,8 @@ class Card
   end
 
   def <=>(other_card)
-    RANK_ORDER.index(rank) <=> RANK_ORDER.index(other_card.rank)
+    (RANK_ORDER.index(rank) - SUIT_ORDER.index(suit)) <=>
+    (RANK_ORDER.index(other_card.rank) - SUIT_ORDER.index(suit))
   end
 
   def to_s
@@ -49,3 +51,9 @@ cards = [Card.new(8, 'Diamonds'),
   Card.new(8, 'Spades')]
 puts cards.min.rank == 8
 puts cards.max.rank == 8
+
+cards = [Card.new(8, 'Diamonds'),
+  Card.new(8, 'Clubs'),
+  Card.new(7, 'Diamonds')]
+puts cards.min
+puts cards.max

@@ -14,7 +14,7 @@ class Machine
   end
 
   def condition
-    switch
+    "Switch is #{switch}."
   end
 
   private
@@ -27,11 +27,11 @@ class Machine
 end
 
 gizmo = Machine.new
-p gizmo
+# p gizmo
 p gizmo.condition
 gizmo.start
-p gizmo
+# p gizmo
 p gizmo.condition
 gizmo.stop
-p gizmo
+# p gizmo
 p gizmo.condition

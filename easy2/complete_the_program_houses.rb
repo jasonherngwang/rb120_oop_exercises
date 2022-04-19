@@ -30,7 +30,7 @@ class House
   end
 
   def <=>(other_house)
-    self.price <=> other_house.price
+    price <=> other_house.price
   end
 
 end

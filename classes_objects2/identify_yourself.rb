@@ -18,7 +18,9 @@ end
 
 kitty = Cat.new('Sophie')
 p kitty.identify
+puts kitty.identify
 p kitty
+puts kitty
 
 
 =begin
@@ -26,6 +28,7 @@ Part 2
 Update the following code so that it prints I'm Sophie! when it invokes 
 puts kitty.
 =end
+puts '----------PART 2-------------'
 
 class Cat
   attr_reader :name

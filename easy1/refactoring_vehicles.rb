@@ -6,6 +6,13 @@ Should we define a wheels method in Vehicle?
 - Only if we wanted to have a default value, e.g. 0 for a Boat.
 - If we did, it ensures that all subclasses of Vehicle respond to the wheels
   method invocation. This is an example of polymorphism.
+
+def wheels
+  self.class::WHEELS
+end
+
+In each subclass:
+WHEELS = 4 or 2 or 6
 =end
 
 class Vehicle

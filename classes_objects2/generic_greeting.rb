@@ -11,6 +11,7 @@ class Cat
 end
 
 Cat.generic_greeting
+Cat::generic_greeting
 
 kitty = Cat.new
 p kitty.class
@@ -24,6 +25,8 @@ Using the following code, add two methods: ::generic_greeting and
 greeting that's generic to the class. The second method should be an instance 
 method and print a greeting that's custom to the object.
 =end
+
+puts "--------PART 2------------"
 
 class Cat
   attr_reader :name
